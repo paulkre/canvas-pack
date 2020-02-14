@@ -1,6 +1,6 @@
 {
   "name": "canvas-pack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tool for creating and exporting html5-canvas visualizations in typescript",
   "license": "ISC",
   "repository": {

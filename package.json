@@ -26,7 +26,8 @@
   "scripts": {
     "build": "rimraf lib/ && tsc",
     "dev": "ts-node-dev --respawn src/index.ts",
-    "start": "node lib/index.js"
+    "start": "node lib/index.js",
+    "release": "release-it"
   },
   "dependencies": {
     "@babel/core": "^7.10.2",
@@ -52,6 +53,7 @@
     "@types/webpack-dev-server": "^3.11.0",
     "@types/webpack-hot-middleware": "^2.25.3",
     "loglevel": "^1.6.8",
+    "release-it": "^13.6.3",
     "rimraf": "^3.0.2",
     "ts-node-dev": "^1.0.0-pre.47",
     "typescript": "^3.9.5"

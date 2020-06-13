@@ -1,6 +1,6 @@
 # canvas-pack
 
-A creative-coding environment for JavaScript. It will automatically reload your code in the browser as soon as you make changes.
+A creative-coding environment for JavaScript. Allows you to use npm packages in your creative-coding sketches. Will automatically reload the page as soon as you make changes to your code.
 
 ## Usage
 
@@ -65,9 +65,11 @@ A creative-coding environment for JavaScript. It will automatically reload your 
 
    ```json
    {
+     ...
      "scripts": {
        "start": "canvas-pack"
      }
+     ...
    }
    ```
 

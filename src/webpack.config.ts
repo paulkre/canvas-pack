@@ -19,6 +19,18 @@ export const config: Configuration = {
   module: {
     rules: [
       {
+        loader: require.resolve("file-loader"),
+        include: /\.(jpg|png|gif|txt|json)$/,
+        options: {
+          name: "static/media/[name].[hash:8].[ext]",
+        },
+      },
+      {
+        test: /\.(glsl|vs|fs|vert|frag)$/,
+        exclude: /node_modules/,
+        use: [require.resolve("raw-loader"), require.resolve("glslify-loader")],
+      },
+      {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         loader: require.resolve("babel-loader"),
@@ -31,13 +43,6 @@ export const config: Configuration = {
           cacheCompression: false,
           sourceMaps: false,
           inputSourceMap: false,
-        },
-      },
-      {
-        loader: require.resolve("file-loader"),
-        exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
-        options: {
-          name: "static/media/[name].[hash:8].[ext]",
         },
       },
     ],

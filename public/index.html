@@ -2,31 +2,39 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			background: #202020;
-			color: white;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
-			justify-content: center;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
-			align-items: center;
-			min-height: 100vh;
-		}
-	</style>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #202020;
+      color: white;
+    }
 
-	<title>Canvas Pack</title>
+    #wrapper {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 2rem;
+    }
+
+    #canvas {
+      display: block;
+      background-color: black;
+      margin: 0 auto;
+      max-width: 100%;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+
+  <title>Canvas Pack</title>
 </head>
 
-<body></body>
+<body>
+  <div id="wrapper">
+    <canvas id="canvas" width="512" height="512"></canvas>
+  </div>
+</body>
 
 </html>

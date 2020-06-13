@@ -1,7 +1,7 @@
 {
   "name": "canvas-pack",
   "version": "0.1.1",
-  "description": "A tool for creating and exporting html5-canvas visualizations in typescript",
+  "description": "A creative-coding environment for JavaScript",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -14,39 +14,32 @@
   "author": "Paul Kretschel <paul.kretschel@icloud.com> (https://paulkre.com)",
   "keywords": [
     "canvas",
-    "export",
-    "image",
-    "sequence",
     "webgl",
     "visualization",
     "creative coding",
     "sketch"
   ],
   "bin": {
-    "canvas-pack": "lib/cli/index.js"
+    "canvas-pack": "lib/index.js"
   },
-  "main": "lib/inc/index.js",
+  "main": "index.js",
   "scripts": {
-    "build": "rm -rf lib/ && tsc",
-    "dev": "nodemon",
-    "start": "node lib/server/cli.js"
+    "build": "rimraf lib/ && tsc",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "start": "node lib/index.js"
   },
   "dependencies": {
-    "atob": "^2.1.2",
-    "body-parser": "^1.19.0",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "babel-loader": "^8.1.0",
     "chalk": "^3.0.0",
     "express": "^4.17.1",
+    "file-loader": "^6.0.0",
     "html-webpack-plugin": "^3.2.0",
-    "is-valid-path": "^0.1.1",
-    "mkdirp": "^1.0.4",
-    "pad-number": "0.0.4",
-    "ts-loader": "^6.2.2",
+    "regenerator-runtime": "^0.13.5",
     "webpack": "^4.43.0",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0"
-  },
-  "peerDependencies": {
-    "typescript": "^3.7.5"
   },
   "devDependencies": {
     "@types/atob": "^2.1.2",
@@ -58,8 +51,9 @@
     "@types/webpack-dev-middleware": "^2.0.5",
     "@types/webpack-dev-server": "^3.11.0",
     "@types/webpack-hot-middleware": "^2.25.3",
-    "nodemon": "^2.0.4",
-    "ts-node": "^8.10.2",
+    "loglevel": "^1.6.8",
+    "rimraf": "^3.0.2",
+    "ts-node-dev": "^1.0.0-pre.47",
     "typescript": "^3.9.5"
   }
 }

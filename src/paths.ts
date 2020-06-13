@@ -8,12 +8,12 @@ const resolveApp = (relativePath: string) =>
 const entryPath =
   process.argv.length > 2 && fs.existsSync(resolveApp(process.argv[2]))
     ? process.argv[2]
-    : "index.ts";
+    : "index.js";
 
 export const paths = {
   dotenv: resolveApp(".env"),
   appPath: resolveApp("."),
   appEntry: resolveApp(entryPath),
   appPackageJson: resolveApp("package.json"),
-  appTsConfig: resolveApp("tsconfig.json")
+  appTsConfig: resolveApp("tsconfig.json"),
 };

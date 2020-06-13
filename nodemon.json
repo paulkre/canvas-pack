@@ -1,5 +1,0 @@
-{
-  "watch": ["src/cli"],
-  "ext": "ts",
-  "exec": "ts-node src/cli/index.ts"
-}

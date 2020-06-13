@@ -65,11 +65,11 @@ A creative-coding environment for JavaScript. Allows you to use npm packages in 
 
    ```json
    {
-     ...
+     // ...
      "scripts": {
        "start": "canvas-pack"
      }
-     ...
+     // ...
    }
    ```
 

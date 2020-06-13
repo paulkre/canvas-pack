@@ -63,7 +63,7 @@ A creative-coding environment for JavaScript. Allows you to use npm packages in 
 
 3. Add `start` script to `package.json`:
 
-   ```json
+   ```jsonc
    {
      // ...
      "scripts": {
